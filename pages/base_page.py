@@ -1,11 +1,10 @@
 from abc import ABC, abstractmethod
 from typing import TypeVar
 
-from selenium.webdriver.common.by import By
 from selenium.webdriver.remote.webdriver import WebDriver
 
 
-Driver = TypeVar('Driver', bound=WebDriver)
+Driver = TypeVar("Driver", bound=WebDriver)
 
 
 class Page(ABC):
@@ -19,6 +18,5 @@ class Page(ABC):
 
 
 class BasePage(Page):
-
     def open(self) -> None:
         self.browser.get(self.url)

@@ -22,10 +22,7 @@ def pytest_addoption(parser: Parser):
         help="Choose browser",
     )
     parser.addoption(
-        "--language",
-        action="store",
-        default="en",
-        help="Choose language"
+        "--language", action="store", default="en", help="Choose language"
     )
 
 

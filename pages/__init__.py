@@ -1,1 +1,1 @@
-from .main_page import MainPage # noqa
+from .main_page import MainPage  # noqa
