@@ -4,7 +4,6 @@ import pytest
 from _pytest.config.argparsing import Parser
 from _pytest.fixtures import SubRequest
 
-from config import IMPLICITY_WAIT
 from utils import get_chrome_driver, get_firefox_driver
 
 
@@ -34,6 +33,5 @@ def browser(request: SubRequest):
         browser = BROWSERS.get(browser_name)(user_language)
     else:
         raise pytest.UsageError("incorect browser name")
-    browser.implicitly_wait(IMPLICITY_WAIT)
     yield browser
     browser.quit()
